@@ -32,5 +32,66 @@ const styles = StyleSheet.create({
     height: width - 40,
     borderRadius: 5,
   },
+  // actions
+  actionsRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  actionsLeft: {
+    flexDirection: 'row',
+    gap: 5,
+  },
+  actionIcon: {},
+  actionsRight: {},
+  saveIcon: {
+    width: 28,
+    height: 28,
+  },
+  // liked by section
+  likedBySection: {
+    flexDirection: 'row',
+  },
+  normalText: {
+    fontSize: 15,
+  },
+  activeText: {
+    fontWeight: 'bold',
+  },
+  likedUser:{
+    width:20,
+    height:20,
+    borderRadius:10,
+    borderWidth:2,
+    borderColor:'white',
+  },
+  viewAllComments:{
+    color:'gray',
+    fontSize: 15,
+  },
+  lastComment:{
+    flexDirection:'row',
+    justifyContent:'space-between'
+  },
+  commentLike:{
+    width:15,
+    height:15
+  },
+  addCommentContainer:{
+    flexDirection:'row',
+    marginTop:5
+  },
+commentUser:{
+  width:20,
+  height:20,
+  borderRadius:10,
+},
+addComment:{
+  paddingHorizontal:10
+},
+time:{
+  fontSize:15,
+  color:"gray",
+  marginTop:5
+}
 });
 export default styles;
