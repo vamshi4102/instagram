@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    // backgroundColor:'red',
+    backgroundColor:'white',
     position: 'absolute',
     bottom: 0,
     left: 0,

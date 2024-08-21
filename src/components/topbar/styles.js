@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
   rightButtons: {
     flexDirection: 'row',
     gap: 10,
+    alignItems:'center'
+  },
+  likeIcon:{
+  width:25,
   },
   rightIcon: {
     width: 30,

@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   },
   actionsLeft: {
     flexDirection: 'row',
+    alignItems:'center',
     gap: 5,
   },
   actionIcon: {},
@@ -92,6 +93,12 @@ time:{
   fontSize:15,
   color:"gray",
   marginTop:5
+},
+likeAction:{
+  height:24,
+  marginTop:3,
+  resizeMode:'contain',
+  marginRight:5
 }
 });
 export default styles;
