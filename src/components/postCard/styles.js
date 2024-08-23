@@ -95,10 +95,15 @@ time:{
   marginTop:5
 },
 likeAction:{
-  height:24,
+  height:25,
   marginTop:3,
   resizeMode:'contain',
   marginRight:5
+},
+activeLike:{
+  marginRight:0,
+  height:25,
+  marginRight:-3
 }
 });
 export default styles;

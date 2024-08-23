@@ -1,9 +1,49 @@
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
-import React from 'react';
+import React,{useRef, useState} from 'react';
 import styles from './styles';
 import usedImages from '../../assets/images';
+import CommentsList from '../commentsList';
+import ShareList from '../shareList';
+import SaveList from '../saveList';
 const PostCard = ({post}) => {
 
+  const [isLiked, setIsLiked] = useState(false);  
+  const [isSaved, setIsSaved] = useState(false);
+  const commentsRef = useRef();
+  const shareRef = useRef();
+  const saveRef = useRef();
+
+  const onClickLike = () => { 
+    setIsLiked(!isLiked);
+   }
+
+   const onClickSave = () => { 
+    setIsSaved(!isSaved);
+    onOpenSave();
+   }
+
+   const onOpenComments = () => {
+    commentsRef.current.open();
+  };
+
+  const onCloseComments = () => {
+    commentsRef.current.close();
+  };
+  const onOpenShare = () => {
+    shareRef.current.open();
+  };
+
+  const onCloseShare = () => {
+    shareRef.current.close();
+  };
+
+  const onOpenSave = () => {
+    saveRef.current.open();
+  };
+
+  const onCloseSave = () => {
+    saveRef.current.close();
+  };
   return (
     <View style={styles.container}>
       {/* top section (user info) */}
@@ -27,22 +67,35 @@ const PostCard = ({post}) => {
       {/*actions buttons */}
       <View style={styles.actionsRow}>
         <View style={styles.actionsLeft}>
-          <TouchableOpacity>
-            <Image
-              source={usedImages.LikeIcon}
-              style={[styles.actionIcon,styles.likeAction]}
+          <TouchableOpacity onPress={onClickLike}>
+            {
+              isLiked?
+              <Image
+              source={usedImages.LikeActiveIcon}
+              style={[styles.actionIcon,styles.activeLike]}
             />
+            : <Image
+            source={usedImages.LikeIcon}
+            style={[styles.actionIcon,styles.likeAction]}
+          />
+            }
+           
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={onOpenComments}>
             <Image source={usedImages.CommentIcon} style={styles.actionIcon} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={onOpenShare}>
             <Image source={usedImages.ShareIcon} style={styles.actionIcon} />
           </TouchableOpacity>
         </View>
         <View style={styles.actionsRight}>
-          <TouchableOpacity>
-            <Image source={usedImages.SaveIcon} style={styles.saveIcon} />
+          <TouchableOpacity onPress={onClickSave}>
+            {
+              isSaved?
+              <Image source={usedImages.SaveActiveIcon} style={styles.saveIcon} />
+              :
+              <Image source={usedImages.SaveIcon} style={styles.saveIcon} />
+            }
           </TouchableOpacity>
         </View>
       </View>
@@ -88,6 +141,10 @@ const PostCard = ({post}) => {
         <TextInput placeholder="Add a comment..." style={styles.addComment} />
       </View>
       <Text style={styles.time}>{post.timestamp}</Text>
+      {/* bottomsheets here */}
+      <CommentsList commentsRef={commentsRef} />
+      <ShareList shareRef={shareRef} />
+      <SaveList saveRef={saveRef} />
     </View>
   );
 };
