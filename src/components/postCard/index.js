@@ -19,7 +19,7 @@ const PostCard = ({post}) => {
 
    const onClickSave = () => { 
     setIsSaved(!isSaved);
-    onOpenSave();
+    // onOpenSave();
    }
 
    const onOpenComments = () => {

@@ -3,7 +3,7 @@ import React, {useRef} from 'react';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import CommentCard from '../commentCard';
 import styles from './styles';
-import { commentsList } from '../../utils/used-data/static-data';
+import {commentsList} from '../../utils/used-data/static-data';
 
 const CommentsList = ({commentsRef}) => {
   return (
@@ -32,10 +32,10 @@ const CommentsList = ({commentsRef}) => {
       <View style={styles.comments}>
         <Text style={styles.heading}>Comments</Text>
         <FlatList
-        data={commentsList}
-        renderItem={({item}) => <CommentCard item={item} />}
-        ListFooterComponent={<View style={{height:80}} />}
-        showsVerticalScrollIndicator={false}
+          data={commentsList}
+          renderItem={({item}) => <CommentCard item={item} />}
+          ListFooterComponent={<View style={{height: 80}} />}
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </RBSheet>

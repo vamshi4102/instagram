@@ -160,3 +160,76 @@ export const commentsList = [
     isLiked: false,
   },
 ];
+
+export const shareList = [
+  {
+    userId: 1,
+    username: 'Vamshikrishna',
+    profile_picture: 'https://one-link.in/youtube/profiles/vamshi4102.png',
+    lastSeen: 2,
+    isActive: true,
+  },
+  {
+    userId: 2,
+    username: 'hanuman',
+    profile_picture: 'https://one-link.in/youtube/profiles/hanuman.png',
+    lastSeen: 5,
+    isActive: true,
+  },
+  {
+    userId: 3,
+    username: 'Vamshi4102',
+    profile_picture: 'https://one-link.in/youtube/profiles/vamshi4102.png',
+    lastSeen: 15,
+    isActive: false,
+  },
+  {
+    userId: 4,
+    username: 'Ramakrishna',
+    profile_picture: 'https://one-link.in/youtube/profiles/user-1.png',
+    lastSeen: 60,
+    isActive: false,
+  },
+  {
+    userId: 5,
+    username: 'SaiKrishna',
+    profile_picture: 'https://one-link.in/youtube/profiles/user-2.png',
+    lastSeen: 120,
+    isActive: false,
+  },
+  {
+    userId: 6,
+    username: 'Suresh',
+    profile_picture: 'https://one-link.in/youtube/profiles/user-3.png',
+    lastSeen: 5,
+    isActive: false,
+  },
+  {
+    userId: 7,
+    username: 'Shiva',
+    profile_picture: 'https://one-link.in/youtube/profiles/user-1.png',
+    lastSeen: 6,
+    isActive: true,
+  },
+  {
+    userId: 8,
+    username: 'Ganesh',
+    profile_picture: 'https://one-link.in/youtube/profiles/user-2.png',
+    lastSeen: 8,
+    isActive: false,
+  },
+  {
+    userId: 9,
+    username: 'Lakshmi',
+    profile_picture: 'https://one-link.in/youtube/profiles/user-3.png',
+    lastSeen: 2880,
+    isActive: false,
+  },
+  {
+    userId: 10,
+    username: 'Radha',
+    profile_picture: 'https://one-link.in/youtube/profiles/user-1.png',
+    lastSeen: 4320,
+    isActive: false,
+  },
+];
