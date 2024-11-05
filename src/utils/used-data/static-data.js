@@ -233,3 +233,66 @@ export const shareList = [
     isActive: false,
   },
 ];
+
+export const storiesList = [
+  {
+    id: 1,
+    name: 'Vamshikrishna',
+    image: 'https://one-link.in/youtube/profiles/vamshi4102.png',
+    read: true,
+  },
+  {
+    id: 2,
+    name: 'hanuman',
+    image: 'https://one-link.in/youtube/profiles/hanuman.png',
+    read: false,
+  },
+  {
+    id: 3,
+    name: 'Vamshi4102',
+    image: 'https://one-link.in/youtube/profiles/vamshi4102.png',
+    read: true,
+  },
+  {
+    id: 4,
+    name: 'Ramakrishna',
+    image: 'https://one-link.in/youtube/profiles/user-1.png',
+    read: false,
+  },
+  {
+    id: 5,
+    name: 'SaiKrishna',
+    image: 'https://one-link.in/youtube/profiles/user-2.png',
+    read: true,
+  },
+  {
+    id: 6,
+    name: 'Suresh',
+    image: 'https://one-link.in/youtube/profiles/user-3.png',
+    read: false,
+  },
+  {
+    id: 7,
+    name: 'Shiva',
+    image: 'https://one-link.in/youtube/profiles/user-1.png',
+    read: true,
+  },
+  {
+    id: 8,
+    name: 'Ganesh',
+    image: 'https://one-link.in/youtube/profiles/user-2.png',
+    read: false,
+  },
+  {
+    id: 9,
+    name: 'Lakshmi',
+    image: 'https://one-link.in/youtube/profiles/user-3.png',
+    read: true,
+  },
+  {
+    id: 10,
+    name: 'Radha',
+    image: 'https://one-link.in/youtube/profiles/user-1.png',
+    read: false,
+  },
+];

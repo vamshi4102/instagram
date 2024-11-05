@@ -5,6 +5,7 @@ import TopBar from '../../components/topbar';
 import BottomBar from '../../components/bottomBar';
 import PostCard from '../../components/postCard';
 import posts from '../../utils/used-data/posts';
+import StoriesList from './stories';
 
 const HomeScreen = () => {
   return (
@@ -15,6 +16,7 @@ const HomeScreen = () => {
         renderItem={({item}) => <PostCard post={item} />}
         showsVerticalScrollIndicator={false}
         ListFooterComponent={<View style={styles.emptySpace} />}
+        ListHeaderComponent={<StoriesList />}
       />
       <BottomBar />
     </View>

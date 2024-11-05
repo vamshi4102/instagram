@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   left: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent:'center',
   },
   imageContainer: {},
   image: {

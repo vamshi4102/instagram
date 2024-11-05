@@ -1,28 +1,28 @@
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
-import React,{useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import styles from './styles';
 import usedImages from '../../assets/images';
 import CommentsList from '../commentsList';
 import ShareList from '../shareList';
 import SaveList from '../saveList';
+import UserProfileImage from '../userProfileImage';
 const PostCard = ({post}) => {
-
-  const [isLiked, setIsLiked] = useState(false);  
+  const [isLiked, setIsLiked] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   const commentsRef = useRef();
   const shareRef = useRef();
   const saveRef = useRef();
 
-  const onClickLike = () => { 
+  const onClickLike = () => {
     setIsLiked(!isLiked);
-   }
+  };
 
-   const onClickSave = () => { 
+  const onClickSave = () => {
     setIsSaved(!isSaved);
     // onOpenSave();
-   }
+  };
 
-   const onOpenComments = () => {
+  const onOpenComments = () => {
     commentsRef.current.open();
   };
 
@@ -49,9 +49,18 @@ const PostCard = ({post}) => {
       {/* top section (user info) */}
       <View style={styles.topSection}>
         <View style={styles.left}>
-          <View style={styles.imageContainer}>
-            <Image source={{uri:post.user.profile_picture}} style={styles.image} />
-          </View>
+          {/* <View style={styles.imageContainer}> */}
+            {/* <Image
+              source={{uri: post.user.profile_picture}}
+              style={styles.image}
+            /> */}
+          {/* </View> */}
+            <UserProfileImage
+              image={post.user.profile_picture}
+              userName={''}
+              isRead={false}
+              place={'post_card'}
+            />
           <View style={styles.username}>
             <Text style={styles.usernameText}>{post.user.username}</Text>
           </View>
@@ -62,24 +71,23 @@ const PostCard = ({post}) => {
       </View>
       {/*post section */}
       <View style={styles.postImageConatainer}>
-        <Image source={{uri:post.media_url}} style={styles.postImage} />
+        <Image source={{uri: post.media_url}} style={styles.postImage} />
       </View>
       {/*actions buttons */}
       <View style={styles.actionsRow}>
         <View style={styles.actionsLeft}>
           <TouchableOpacity onPress={onClickLike}>
-            {
-              isLiked?
+            {isLiked ? (
               <Image
-              source={usedImages.LikeActiveIcon}
-              style={[styles.actionIcon,styles.activeLike]}
-            />
-            : <Image
-            source={usedImages.LikeIcon}
-            style={[styles.actionIcon,styles.likeAction]}
-          />
-            }
-           
+                source={usedImages.LikeActiveIcon}
+                style={[styles.actionIcon, styles.activeLike]}
+              />
+            ) : (
+              <Image
+                source={usedImages.LikeIcon}
+                style={[styles.actionIcon, styles.likeAction]}
+              />
+            )}
           </TouchableOpacity>
           <TouchableOpacity onPress={onOpenComments}>
             <Image source={usedImages.CommentIcon} style={styles.actionIcon} />
@@ -90,12 +98,14 @@ const PostCard = ({post}) => {
         </View>
         <View style={styles.actionsRight}>
           <TouchableOpacity onPress={onClickSave}>
-            {
-              isSaved?
-              <Image source={usedImages.SaveActiveIcon} style={styles.saveIcon} />
-              :
+            {isSaved ? (
+              <Image
+                source={usedImages.SaveActiveIcon}
+                style={styles.saveIcon}
+              />
+            ) : (
               <Image source={usedImages.SaveIcon} style={styles.saveIcon} />
-            }
+            )}
           </TouchableOpacity>
         </View>
       </View>
@@ -119,7 +129,8 @@ const PostCard = ({post}) => {
           <Text style={styles.activeText}>25,451 Others</Text>
         </Text> */}
         <Text style={styles.normalText}>
-          Liked by <Text style={styles.activeText}>{post.like_count} people</Text>
+          Liked by{' '}
+          <Text style={styles.activeText}>{post.like_count} people</Text>
         </Text>
       </View>
       <Text style={styles.normalText}>
@@ -127,17 +138,24 @@ const PostCard = ({post}) => {
         {post.caption.text}
       </Text>
       {/* post comments section */}
-      <Text style={styles.viewAllComments}>View all {post.comments_count} Comments</Text>
+      <Text style={styles.viewAllComments}>
+        View all {post.comments_count} Comments
+      </Text>
       <View style={styles.lastComment}>
         <Text style={styles.normalText}>
-          <Text style={styles.activeText}>{post.comments[0].from.username} </Text>
+          <Text style={styles.activeText}>
+            {post.comments[0].from.username}{' '}
+          </Text>
           {post.comments[0].text}
         </Text>
         <Image source={usedImages.LikeIcon} style={styles.commentLike} />
       </View>
       {/* add comment section */}
       <View style={styles.addCommentContainer}>
-        <Image source={{uri:post.loggedUser.profile_picture}} style={styles.commentUser} />
+        <Image
+          source={{uri: post.loggedUser.profile_picture}}
+          style={styles.commentUser}
+        />
         <TextInput placeholder="Add a comment..." style={styles.addComment} />
       </View>
       <Text style={styles.time}>{post.timestamp}</Text>
