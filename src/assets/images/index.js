@@ -24,6 +24,7 @@ const usedImages = {
   CommentIcon: require('./Comment.png'),
   SaveIcon: require('./Save.png'),
   SaveActiveIcon: require('./Save-active.png'),
+  facebookLogo: require('./facebook_logo.png'),
   postLikedUsers: [
     {
       id: 1,

@@ -11,7 +11,7 @@ const App = () => {
   
   const Stack = createStackNavigator();
   const [isLoading, setisLoading] = useState(true);
-  const [isUserLogged, setisUserLogged] = useState(true);
+  const [isUserLogged, setisUserLogged] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
