@@ -9,7 +9,7 @@ import StoriesList from './stories';
 
 const HomeScreen = () => {
   return (
-    <View style={{height: '100%'}}>
+    <View style={{height: '100%',backgroundColor:'white'}}>
       <TopBar />
       <FlatList
         data={posts}
