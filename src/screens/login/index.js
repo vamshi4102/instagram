@@ -3,9 +3,19 @@ import React from 'react';
 import usedImages from '../../assets/images';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
+import EncryptedStorage from 'react-native-encrypted-storage';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
+
+  async function onClickLogin() {
+    try {
+      await EncryptedStorage.setItem('user_logged', 'true');
+      navigation.navigate('Home');
+    } catch (error) {
+      console.log('error', error);
+    }
+  }
   return (
     <View style={styles.container}>
       <Image source={usedImages.homeLogo} style={styles.logo} />
@@ -18,7 +28,7 @@ const LoginScreen = () => {
       {/* ----- */}
       <TouchableOpacity
         style={styles.submit}
-        onPress={() => navigation.navigate('Home')}>
+        onPress={() => onClickLogin()}>
         <Text style={styles.submitText}>Login</Text>
       </TouchableOpacity>
       <View style={styles.or}>

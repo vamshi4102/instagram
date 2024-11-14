@@ -14,6 +14,9 @@ const usedImages = {
   Profile: require('./Profile.png'),
   ProfileActive: require('./Profile-active.png'),
   Create: require('./Create.png'),
+  downIcon: require('./Chevron-Down.png'),
+  thredIcon: require('./Threads.png'),
+  menuIcon:require('./Menu.png'),
   CreateActive: require('./Create-active.png'),
   userImage: {
     uri: 'https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=2152',
