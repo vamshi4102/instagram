@@ -296,3 +296,12 @@ export const storiesList = [
     read: false,
   },
 ];
+export const userProfile = {
+  username: 'vamshikrishna',
+  profile_picture: 'https://one-link.in/youtube/profiles/vamshi4102.png',
+  postsCount: 58,
+  followersCount: 49,
+  followingCount: 12,
+  bio: 'Mobile & app developer, Follow and subscribe to learn',
+  bioLink: 'https://www.youtube.com/@AppDevelopmentinTelugu',
+};
