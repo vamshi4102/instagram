@@ -1,22 +1,49 @@
 import {
+  Alert,
+  Button,
   Dimensions,
   Image,
+  Linking,
   Pressable,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
-import {userProfile} from '../../../utils/used-data/static-data';
+import React, {useCallback} from 'react';
+import {userProfile} from '../../../../utils/used-data/static-data';
 const {width, height} = Dimensions.get('window');
 import LinearGradient from 'react-native-linear-gradient';
-import usedImages from '../../../assets/images';
+import usedImages from '../../../../assets/images';
+import styles from './styles';
 
 const ProfileInfo = () => {
   const isRead = false;
   const borderColor = isRead
     ? ['#f3f3f3', '#f3f3f3', '#f3f3f3']
     : ['#962fbf', '#fa7e1e', '#feda75'];
+
+  const OpenProfileUrl = ({url, children}) => {
+    const handlePress = useCallback(async () => {
+      // Checking if the link is supported for links with custom URL scheme.
+      const supported = await Linking.canOpenURL(url);
+
+      if (supported) {
+        // Opening the link with some app, if the URL scheme is "http" the web link should be opened
+        // by some browser in the mobile
+        await Linking.openURL(url);
+      } else {
+        Alert.alert(`Don't know how to open this URL: ${url}`);
+      }
+    }, [url]);
+
+    return (
+      <TouchableOpacity onPress={handlePress} style={{width:"100%",backgroundColor:'red'}}>
+        <Text style={styles.linkText} numberOfLines={1}>{children}</Text>
+      </TouchableOpacity>
+    );
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.userCounts}>
@@ -51,75 +78,17 @@ const ProfileInfo = () => {
         <Text style={styles.userName}>{userProfile?.username}</Text>
         <Text style={styles.bio}>{userProfile?.bio}</Text>
       </View>
+      {/* -------------------------- */}
+      <View style={styles.bioLink}>
+        <Image source={usedImages.linkIcon} style={styles.linkIcon} />
+        <Text numberOfLines={1}>
+          <OpenProfileUrl url={userProfile?.bioLink}>
+            {userProfile?.bioLink}
+          </OpenProfileUrl>
+        </Text>
+      </View>
     </View>
   );
 };
 
 export default ProfileInfo;
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
-    paddingHorizontal: 24,
-    gap: 10,
-    paddingVertical:24
-  },
-  userCounts: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-  },
-  image: {
-    width: width * 0.2,
-    height: width * 0.2,
-    borderRadius: width * 0.2,
-    padding: 4,
-  },
-  profileImage: {
-    width: '100%',
-    height: '100%',
-    borderRadius: width * 0.25,
-    borderWidth: 5,
-    borderColor: 'white',
-  },
-  right: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    gap: 15,
-    flex: 1,
-  },
-  countView: {
-    alignItems: 'center',
-  },
-  count: {
-    fontSize: 18,
-    fontWeight: '600',
-  },
-  countName: {
-    fontSize: 12,
-  },
-  storyIcon: {
-    backgroundColor: '#0098FD',
-    padding: 2,
-    borderRadius: 25,
-    borderWidth: 5,
-    borderColor: 'white',
-    position: 'absolute',
-    right: 0,
-    bottom: 0,
-    zIndex: 10,
-  },
-  addStory: {
-    width: 15,
-    height: 15,
-    zIndex: 10,
-  },
-  userName: {
-    fontSize: 20,
-    color: 'black',
-  },
-  bio: {
-    fontSize: 15,
-  },
-});
