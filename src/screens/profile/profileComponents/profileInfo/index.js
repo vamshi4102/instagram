@@ -38,7 +38,7 @@ const ProfileInfo = () => {
     }, [url]);
 
     return (
-      <TouchableOpacity onPress={handlePress} style={{width:"100%",backgroundColor:'red'}}>
+      <TouchableOpacity onPress={handlePress} style={{width:"100%"}}>
         <Text style={styles.linkText} numberOfLines={1}>{children}</Text>
       </TouchableOpacity>
     );
@@ -86,6 +86,18 @@ const ProfileInfo = () => {
             {userProfile?.bioLink}
           </OpenProfileUrl>
         </Text>
+      </View>
+      {/* ------------------------- */}
+      <View style={styles.actionsRow}>
+        <TouchableOpacity style={[styles.actionButton,{backgroundColor:"#0098FD"}]}>
+          <Text style={[styles.actionButtonText,{color:'#fff'}]}>Follow</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.actionButton}>
+          <Text style={styles.actionButtonText}>Message</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.actionButton}>
+          <Text style={styles.actionButtonText}>Email</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

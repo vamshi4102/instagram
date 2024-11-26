@@ -67,17 +67,34 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   bioLink: {
-    flexDirection:'row',
-    alignItems:'center',
-    gap:5
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
   },
   linkIcon: {
-    width:18,
-    height:18
+    width: 18,
+    height: 18,
   },
   linkText: {
-    fontWeight:"600",
-    maxWidth:"60%"
+    fontWeight: '600',
+    maxWidth: '90%',
+  },
+  // ------------
+  actionsRow: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  actionButton: {
+    width: '32%',
+    backgroundColor: '#EFEFEF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 35,
+    borderRadius: 6,
+  },
+  actionButtonText: {
+    fontSize: 13,
+    fontWeight: 'bold',
   },
 });
 export default styles;

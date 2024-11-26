@@ -30,6 +30,10 @@ const usedImages = {
   facebookLogo: require('./facebook_logo.png'),
   addStory: require('./add-story.png'),
   linkIcon: require('./Link.png'),
+  gridIcon: require('./Grid.png'),
+  premiumIcon: require('./Exclusive.png'),
+  reelsGrayIcon: require('./Reels-gray.png'),
+  userMentionsIcon: require('./Tag.png'),
   postLikedUsers: [
     {
       id: 1,

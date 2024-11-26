@@ -17,7 +17,7 @@ const BottomBar = () => {
   };
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={()=>  navigation.navigate('Home')}>
         <Image source={usedImages.HomeActive} style={styles.icon} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
