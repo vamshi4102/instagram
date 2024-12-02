@@ -34,6 +34,7 @@ const usedImages = {
   premiumIcon: require('./Exclusive.png'),
   reelsGrayIcon: require('./Reels-gray.png'),
   userMentionsIcon: require('./Tag.png'),
+  cameraImage: require('./Camera.png'),
   postLikedUsers: [
     {
       id: 1,

@@ -14,7 +14,10 @@ const UserProfileImage = ({image, userName, place, isRead}) => {
       return width * 0.2;
     }
     else if (place === 'post_card') {
-      return width * 0.1;
+      return width * 0.13;
+    }
+    else if (place === 'chat_list') {
+      return width * 0.13;
     }
   };
   return (

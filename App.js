@@ -7,6 +7,8 @@ import ProfileScreen from './src/screens/profile';
 import {NavigationContainer} from '@react-navigation/native';
 import LoginScreen from './src/screens/login';
 import EncryptedStorage from 'react-native-encrypted-storage';
+import ChatLists from './src/screens/chatLists';
+import ChatRoom from './src/screens/chatRoom';
 
 const App = () => {
   const Stack = createStackNavigator();
@@ -46,6 +48,8 @@ const App = () => {
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Profile" component={ProfileScreen} />
             <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="ChatRoom" component={ChatRoom} />
+            <Stack.Screen name="ChatLists" component={ChatLists} />
           </Stack.Navigator>
         </NavigationContainer>
       )}
