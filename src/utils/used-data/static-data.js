@@ -305,3 +305,105 @@ export const userProfile = {
   bio: 'Mobile & app developer, Follow and subscribe to learn',
   bioLink: 'https://www.youtube.com/@AppDevelopmentinTelugu',
 };
+export const notificationsList = [
+  {
+    id: 1,
+    user: {
+      name: 'Vamshikrishna',
+      image: 'https://one-link.in/youtube/profiles/vamshi4102.png',
+    },
+    message: 'liked your photo',
+    timestamp: '2 hours ago',
+    read: true,
+  },
+  {
+    id: 2,
+    user: {
+      name: 'hanuman',
+      image: 'https://one-link.in/youtube/profiles/hanuman.png',
+    },
+    message: 'started following you',
+    timestamp: '5 hours ago',
+    read: false,
+  },
+  {
+    id: 3,
+    user: {
+      name: 'Vamshi4102',
+      image: 'https://one-link.in/youtube/profiles/vamshi4102.png',
+    },
+    message: 'commented: "Amazing post!"',
+    timestamp: '1 day ago',
+    read: true,
+  },
+  {
+    id: 4,
+    user: {
+      name: 'Ramakrishna',
+      image: 'https://one-link.in/youtube/profiles/user-1.png',
+    },
+    message: 'liked your story',
+    timestamp: '3 days ago',
+    read: false,
+  },
+  {
+    id: 5,
+    user: {
+      name: 'SaiKrishna',
+      image: 'https://one-link.in/youtube/profiles/user-2.png',
+    },
+    message: 'mentioned you in a comment',
+    timestamp: '1 week ago',
+    read: true,
+  },
+  {
+    id: 6,
+    user: {
+      name: 'Suresh',
+      image: 'https://one-link.in/youtube/profiles/user-3.png',
+    },
+    message: 'started following you',
+    timestamp: '2 weeks ago',
+    read: false,
+  },
+  {
+    id: 7,
+    user: {
+      name: 'Shiva',
+      image: 'https://one-link.in/youtube/profiles/user-1.png',
+    },
+    message: 'liked your photo',
+    timestamp: '3 weeks ago',
+    read: true,
+  },
+  {
+    id: 8,
+    user: {
+      name: 'Ganesh',
+      image: 'https://one-link.in/youtube/profiles/user-2.png',
+    },
+    message: 'liked your comment',
+    timestamp: '4 weeks ago',
+    read: false,
+  },
+  {
+    id: 9,
+    user: {
+      name: 'Lakshmi',
+      image: 'https://one-link.in/youtube/profiles/user-3.png',
+    },
+    message: 'shared your post',
+    timestamp: '1 month ago',
+    read: true,
+  },
+  {
+    id: 10,
+    user: {
+      name: 'Radha',
+      image: 'https://one-link.in/youtube/profiles/user-1.png',
+    },
+    message: 'liked your photo',
+    timestamp: '2 months ago',
+    read: false,
+  },
+];

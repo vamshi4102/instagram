@@ -9,6 +9,7 @@ import LoginScreen from './src/screens/login';
 import EncryptedStorage from 'react-native-encrypted-storage';
 import ChatLists from './src/screens/chatLists';
 import ChatRoom from './src/screens/chatRoom';
+import Notifications from './src/screens/notifcations';
 
 const App = () => {
   const Stack = createStackNavigator();
@@ -50,6 +51,7 @@ const App = () => {
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="ChatRoom" component={ChatRoom} />
             <Stack.Screen name="ChatLists" component={ChatLists} />
+            <Stack.Screen name="Notifications" component={Notifications} />
           </Stack.Navigator>
         </NavigationContainer>
       )}

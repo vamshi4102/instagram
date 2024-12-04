@@ -10,10 +10,12 @@ const TopBar = () => {
     <View style={styles.container}>
       <Image source={usedImages.homeLogo} style={styles.mainLogo} />
       <View style={styles.rightButtons}>
-        <Image
-          style={[styles.rightIcon, styles.likeIcon]}
-          source={usedImages.LikeIcon}
-        />
+        <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
+          <Image
+            style={[styles.rightIcon, styles.likeIcon]}
+            source={usedImages.LikeIcon}
+          />
+        </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('ChatLists')}>
           <Image style={styles.rightIcon} source={usedImages.ShareIcon} />
         </TouchableOpacity>
