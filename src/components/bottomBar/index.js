@@ -20,7 +20,7 @@ const BottomBar = () => {
       <TouchableOpacity style={styles.button} onPress={()=>  navigation.navigate('Home')}>
         <Image source={usedImages.HomeActive} style={styles.icon} />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={()=>  navigation.navigate('Search')}>
         <Image source={usedImages.Search} style={styles.icon} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
