@@ -407,7 +407,7 @@ export const notificationsList = [
     read: false,
   },
 ];
-const postsList = [
+export const postsList = [
   {
     id: 1,
     user: {
@@ -649,5 +649,91 @@ const postsList = [
     timestamp: '2 months ago',
   },
 ];
+export const reelsArray = [
+  {
+    id: "17896450804055594",
+    user: {
+      username: "hanuman",
+      profile_picture: "https://one-link.in/youtube/profiles/hanuman.png",
+      full_name: "Sri Hanuman",
+      is_verified: false,
+    },
+    caption: "Jai sri ram, Jai sri ram,Jai sri ram ",
+    videoUrl: "https://videos.pexels.com/video-files/6389054/6389054-uhd_1440_2560_25fps.mp4",
+    thumbnail_url: "https://one-link.in/youtube/profiles/sriram.png",
+    timestamp: "3m Ago",
+    like_count: 1580,
+    comments_count: 820,
+    location: "Hyderabad,India",
+    tags: ["sriram", "instagram", "india"],
+  },
+  {
+    id: "17896450804055595",
+    user: {
+      username: "Vamshi4102",
+      profile_picture: "https://one-link.in/youtube/profiles/vamshi4102.png",
+      full_name: "Vamshi krishna",
+      is_verified: false,
+    },
+    caption: "Never ever give up!!",
+    videoUrl: "https://videos.pexels.com/video-files/7413785/7413785-hd_1080_1920_24fps.mp4",
+    thumbnail_url: "https://one-link.in/youtube/posts/2.png",
+    timestamp: "3m Ago",
+    like_count: 17850,
+    comments_count: 820,
+    location: "Telangana,India",
+    tags: ["sriram", "instagram", "india"],
+  },
+  {
+    id: "17896450804055596",
+    user: {
+      username: "Krishna.003_",
+      profile_picture: "https://one-link.in/youtube/profiles/user-1.png",
+      full_name: "krishna",
+      is_verified: false,
+    },
+    caption: "Your mind is powerful than anything!!",
+    videoUrl: "https://videos.pexels.com/video-files/3831765/3831765-uhd_1440_2732_25fps.mp4",
+    thumbnail_url: "https://one-link.in/youtube/posts/1.png",
+    timestamp: "3m Ago",
+    like_count: 17550,
+    comments_count: 250,
+    location: "Andhrapradesh,India",
+    tags: ["sriram", "instagram", "india"],
+  },
+  {
+    id: "17896450804055594",
+    user: {
+      username: "hanuman",
+      profile_picture: "https://one-link.in/youtube/profiles/hanuman.png",
+      full_name: "Sri Hanuman",
+      is_verified: false,
+    },
+    caption: "Jai sri ram, Jai sri ram,Jai sri ram ",
+    videoUrl: "https://videos.pexels.com/video-files/19971139/19971139-hd_1080_1920_60fps.mp4",
+    thumbnail_url: "https://one-link.in/youtube/profiles/sriram.png",
+    timestamp: "3m Ago",
+    like_count: 78,
+    comments_count: 2054,
+    location: "Hyderabad,India",
+    tags: ["sriram", "instagram", "india"],
+  },
+  {
+    id: "17896450804055595",
+    user: {
+      username: "Vamshi4102",
+      profile_picture: "https://one-link.in/youtube/profiles/vamshi4102.png",
+      full_name: "Vamshi krishna",
+      is_verified: false,
+    },
+    caption: "Never ever give up!!",
+    videoUrl: "https://videos.pexels.com/video-files/6388396/6388396-uhd_1440_2560_25fps.mp4",
+    thumbnail_url: "https://one-link.in/youtube/posts/2.png",
+    timestamp: "3m Ago",
+    like_count: 578,
+    comments_count: 2045,
+    location: "Telangana,India",
+    tags: ["sriram", "instagram", "india"],
+  },
+];
 
-export default postsList;

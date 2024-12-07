@@ -24,6 +24,7 @@
     "react-native-screens": "^4.0.0",
     "react-native-skeleton-placeholder": "^5.2.4",
     "react-native-svg": "^15.10.1",
+    "react-native-swiper": "^1.6.0",
     "react-native-video": "^6.8.2"
   },
   "devDependencies": {
