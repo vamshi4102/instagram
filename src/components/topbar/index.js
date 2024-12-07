@@ -1,4 +1,4 @@
-import {Image, TouchableOpacity, View} from 'react-native';
+import {Image, TouchableOpacity, View, Platform} from 'react-native';
 import React from 'react';
 import usedImages from '../../assets/images';
 import styles from './styles';
@@ -8,7 +8,13 @@ const TopBar = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Image source={usedImages.homeLogo} style={styles.mainLogo} />
+      <Image
+        source={usedImages.homeLogo}
+        style={[
+          styles.mainLogo,
+          {height: Platform.OS === 'android' && 35, resizeMode: 'contain'},
+        ]}
+      />
       <View style={styles.rightButtons}>
         <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
           <Image

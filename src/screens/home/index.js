@@ -1,4 +1,4 @@
-import {View, Text, SafeAreaView, FlatList} from 'react-native';
+import {View, Text, SafeAreaView, FlatList,StatusBar} from 'react-native';
 import React from 'react';
 import styles from './styles';
 import TopBar from '../../components/topbar';
@@ -11,6 +11,7 @@ const HomeScreen = () => {
   return (
     <View style={{height: '100%',backgroundColor:'white'}}>
       <TopBar />
+      <StatusBar backgroundColor={"white"} barStyle={"dark-content"} />
       <FlatList
         data={posts}
         renderItem={({item}) => <PostCard post={item} />}

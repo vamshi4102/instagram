@@ -26,7 +26,7 @@ const BottomBar = () => {
       <TouchableOpacity style={styles.button}>
         <Image source={usedImages.Create} style={styles.icon} />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={()=>  navigation.navigate('Reels')}>
         <Image source={usedImages.Reel} style={styles.icon} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => onClickProfile()}>

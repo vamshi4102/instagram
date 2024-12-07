@@ -11,6 +11,7 @@ import ChatLists from './src/screens/chatLists';
 import ChatRoom from './src/screens/chatRoom';
 import Notifications from './src/screens/notifcations';
 import Search from './src/screens/search';
+import ReelsScreen from './src/screens/reels';
 
 const App = () => {
   const Stack = createStackNavigator();
@@ -54,6 +55,7 @@ const App = () => {
             <Stack.Screen name="ChatLists" component={ChatLists} />
             <Stack.Screen name="Notifications" component={Notifications} />
             <Stack.Screen name="Search" component={Search} />
+            <Stack.Screen name="Reels" component={ReelsScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       )}
